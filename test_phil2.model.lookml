@@ -785,7 +785,21 @@
       sql_on: ${service_category.line_of_business_id} = ${line_of_business.id}
       relationship: many_to_one
 
+    - join: category_recycling
+      type: left_outer 
+      sql_on: ${service_category.id} = ${category_recycling.service_category_id}
+      relationship: one_to_many
 
+    - join: recycling_method
+      type: left_outer 
+      sql_on: ${category_recycling.recycling_method_id} = ${recycling_method.id}
+      relationship: many_to_one
+
+    - join: recycling_percentage
+      type: left_outer 
+      sql_on: ${category_recycling.id} = ${recycling_percentage.category_recycling_id} and ${customer.id} = ${recycling_percentage.customer_id}
+      relationship: one_to_many
+      
 # - explore: vendor_service_bak
 #   joins:
 #     - join: customer
