@@ -20,6 +20,7 @@
     sql: ${TABLE}.ClientName
 
   - dimension_group: fin
+    label: 'Month-year'
     type: time
     timeframes: [date, week, month]
     convert_tz: false
@@ -33,3 +34,6 @@
     type: count
     drill_fields: [id, client_name]
 
+  - measure: total 
+    type: sum
+    sql: ${amount}

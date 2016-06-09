@@ -53,6 +53,7 @@
       sql_on: ${service_category.line_of_business_id} = ${line_of_business.id}
       relationship: many_to_one
 
+- explore: client_monthly_totals
 
 - explore: customer
   label:  'Locations-Sites'
