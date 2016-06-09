@@ -25,7 +25,7 @@
   joins:
     - join: customer
       type: left_outer 
-      sql_on: ${container.customer_id} = ${customer.id
+      sql_on: ${container.customer_id} = ${customer.id}
       relationship: many_to_one
 
     - join: service_category
