@@ -25,7 +25,7 @@
   joins:
     - join: customer
       type: left_outer 
-      sql_on: ${container.customer_id} = ${customer.id}
+      sql_on: ${container.customer_id} = ${customer.id
       relationship: many_to_one
 
     - join: service_category
@@ -55,6 +55,7 @@
 
 
 - explore: customer
+  label:  'Locations-Sites'
   joins:
   - join: customer_profile
     type: left_outer 
@@ -100,6 +101,7 @@
 
 
 - explore: customer_profile
+  label:  'Customer Name'
 
 - explore: customer_segment
   joins:
