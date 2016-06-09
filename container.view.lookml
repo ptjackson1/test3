@@ -24,6 +24,12 @@
     type: number
     # hidden: true
     sql: ${TABLE}.CustomerID
+    
+  - dimension: size_type_uom
+    type: string
+    sql: ${size} + ${type} + ${uom}
+    
+    # need to cast
 
   - dimension: frequency
     type: number

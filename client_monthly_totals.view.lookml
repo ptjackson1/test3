@@ -29,11 +29,31 @@
   - dimension: income_or_expense
     type: string
     sql: ${TABLE}.IncomeOrExpense
-
+    
+  - dimension: income_amount
+    type: number
+    sql: |
+      CASE 
+        WHEN ${income_or_expense} = 'i'
+        THEN ${amount}
+      END
+      
+  - dimension: expense_amount
+    type: number
+    sql: |
+      CASE 
+        WHEN ${income_or_expense} = 'e'
+        THEN ${amount}
+      END
+      
   - measure: count
     type: count
     drill_fields: [id, client_name]
 
-  - measure: total 
+  - measure: total_income 
     type: sum
-    sql: ${amount}
+    sql: ${income_amount}
+    
+  - measure: total_expense
+    type: sum
+    sql: ${expense_amount}  

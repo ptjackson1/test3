@@ -109,4 +109,7 @@
     - vendor_service.count
     - vendor_service_bak.count
     - vendor_service_summary.count
+    detail2:
+    - id
+    - name
 
