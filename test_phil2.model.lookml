@@ -731,6 +731,7 @@
 - explore: vendor_service
   joins:
     - join: customer
+      view_label: 'location-site'
       type: left_outer 
       sql_on: ${vendor_service.customer_id} = ${customer.id}
       relationship: many_to_one
@@ -771,6 +772,7 @@
 #       relationship: many_to_one
 
     - join: customer_profile
+      view_label: 'Customer'
       type: left_outer 
       sql_on: ${customer.customer_profile_id} = ${customer_profile.id}
       relationship: many_to_one
