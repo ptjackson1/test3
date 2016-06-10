@@ -81,11 +81,11 @@
     type: sum
     sql: ${quantity}
     value_format_name: decimal_2
-    drill_fields: detail*
+    drill_fields: [id, customer.id, customer.name, service_category.id, service_category.display_name]
   
   - measure: total_Size
     type: sum
     sql: ${size}
     value_format_name: decimal_2
-    drill_fields: detail*
+    drill_fields: [id, customer.id, customer.name, service_category.id, service_category.display_name]
 
