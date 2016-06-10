@@ -3,8 +3,8 @@
   fields:
 
   - dimension: id
-    primary_key: true
     type: number
+    primary_key: true
     sql: ${TABLE}.ID
 
   - dimension_group: create
@@ -16,6 +16,10 @@
     type: string
     sql: ${TABLE}.CreateUser
 
+  - dimension: percentage
+    type: number
+    sql: ${TABLE}.Percentage
+
   - dimension: recycling_method_id
     type: number
     # hidden: true
@@ -26,6 +30,9 @@
     # hidden: true
     sql: ${TABLE}.ServiceCategoryID
 
+  - measure: percentageRecycle
+    type: number
+    sql: ${TABLE}.Percentage
   - measure: count
     type: count
     drill_fields: detail*

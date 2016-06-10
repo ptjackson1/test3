@@ -19,6 +19,7 @@
        type: left_outer 
        sql_on: ${service_category.line_of_business_id} = ${line_of_business.id}
        relationship: many_to_one
+       
 
 
 - explore: container
@@ -758,6 +759,8 @@
       type: left_outer 
       sql_on: ${vendor_service.recycle_center_id} = ${recycle_center.id}
       relationship: many_to_one
+      
+
 
 #    - join: exception
 #      type: left_outer 
@@ -793,7 +796,7 @@
     - join: category_recycling
       type: left_outer 
       sql_on: ${service_category.id} = ${category_recycling.service_category_id}
-      relationship: one_to_many
+      relationship: many_to_one
 
     - join: recycling_method
       type: left_outer 

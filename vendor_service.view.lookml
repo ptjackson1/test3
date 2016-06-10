@@ -145,6 +145,13 @@
     value_format_name: decimal_2
     drill_fields: detail*
 
+  - measure: percentageRecycle
+    type: number
+    sql: category_recycling.Percentage
+    
+  - measure: Units_Recycled 
+    type: number
+    sql: ${total_collected_units} * ${percentageRecycle}
 
   # ----- Sets of fields for drilling ------
   sets:
