@@ -4,10 +4,12 @@
 
   - dimension: id
     primary_key: true
+    hidden: true
     type: number
     sql: ${TABLE}.ID
 
   - dimension: amount
+    hidden: true
     type: number
     sql: ${TABLE}.Amount
 
@@ -20,27 +22,29 @@
     sql: ${TABLE}.CollectedUOM
 
   - dimension_group: create
+    hidden: true
     type: time
     timeframes: [time, date, week, month]
     sql: ${TABLE}.CreateDate
 
   - dimension: create_user
+    hidden: true 
     type: string
     sql: ${TABLE}.CreateUser
 
   - dimension: customer_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerID
 
   - dimension: customer_segment_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerSegmentID
 
   - dimension: data_source_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.DataSourceID
 
   - dimension: equipment_type
@@ -49,16 +53,17 @@
 
   - dimension: exception_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.ExceptionID
 
   - dimension: exception_notes
+    hidden: true
     type: string
     sql: ${TABLE}.ExceptionNotes
 
   - dimension: file_import_log_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.FileImportLogID
 
   - dimension: hauler_name
@@ -81,6 +86,7 @@
 
   - dimension: item_id
     type: number
+    hidden: true 
     sql: ${TABLE}.ItemID
 
   - dimension: manifest_number
@@ -89,12 +95,12 @@
 
   - dimension: recycle_center_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.RecycleCenterID
 
   - dimension: service_category_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.ServiceCategoryID
 
   - dimension_group: service
@@ -109,24 +115,28 @@
 
   - dimension: transaction_id
     type: number
+    hidden: true
     sql: ${TABLE}.Transaction_ID
 
   - dimension: transaction_line_id
+    hidden: true
     type: number
     sql: ${TABLE}.Transaction_Line_ID
 
   - dimension_group: update
     type: time
+    hidden: true
     timeframes: [time, date, week, month]
     sql: ${TABLE}.UpdateDate
 
   - dimension: update_user
     type: string
+    hidden: true
     sql: ${TABLE}.UpdateUser
 
   - dimension: vendor_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.VendorID
 
   - measure: count
@@ -158,20 +168,12 @@
     detail:
     - id
     - hauler_name
-    - customer.id
     - customer.name
-    - customer_segment.id
     - customer_segment.level_name
     - vendor.id
     - vendor.name
-    - service_category.id
     - service_category.display_name
-    - recycle_center.id
     - recycle_center.name
-    - exception.id
-    - data_source.id
-    - file_import_log.id
-    - file_import_log.file_name
     - service_category_attribute_value.count
     - service_category_attribute_value_bk.count
     - vendor_service_excess_columns.count
