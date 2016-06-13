@@ -57,3 +57,7 @@
   - measure: total_expense
     type: sum
     sql: ${expense_amount}  
+    
+  - measure: Gross_Profit
+    type: number
+    sql: ${total_income}-${total_expense}
