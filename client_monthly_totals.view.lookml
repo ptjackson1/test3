@@ -67,7 +67,7 @@
     
   - measure: Gross_Margin
     type: number
-    sql: ${total_expense}/{$total_income}-1
+    sql: ${total_expense}/${$total_income}-1
     #sql: |
      # CASE 
       #  WHEN ${total_income}=0
