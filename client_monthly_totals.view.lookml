@@ -67,7 +67,7 @@
     
   - measure: Gross_Margin
     type: number
-    sql: ${total_expense}/${total_income}
+    sql: Select Case when ${total_income}=0 then null Else ${total_expense}/${total_income} End ,,,
     value_format: '0.00\%'
   
     
