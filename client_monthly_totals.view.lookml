@@ -61,3 +61,9 @@
   - measure: Gross_Profit
     type: number
     sql: ${total_income}-${total_expense}
+    
+  - measure: Gross_Margin
+    type: number
+    sql: ${total_expense}/${total_income}
+  
+    
