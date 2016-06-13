@@ -67,7 +67,7 @@
     
   - measure: Gross_Margin
     type: number
-    sql: ${total_expense}/${$total_income}-1
+    sql: (100.00 * ${total_expense}/NULLIF(${total_income}, 0)-100) * -1 
     #sql: |
      # CASE 
       #  WHEN ${total_income}=0
@@ -75,6 +75,6 @@
       #  ELSE ${total_expense}/${total_income} - 1
       #  END
     
-    value_format: '0.00\%'
+    value_format: '0.000'
   
     
