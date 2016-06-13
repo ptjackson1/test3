@@ -53,17 +53,21 @@
   - measure: total_income 
     type: sum
     sql: ${income_amount}
+    value_format_name: usd
     
   - measure: total_expense
     type: sum
-    sql: ${expense_amount}  
+    sql: ${expense_amount}
+    value_format_name: usd
     
   - measure: Gross_Profit
     type: number
     sql: ${total_income}-${total_expense}
+    value_format_name: usd
     
   - measure: Gross_Margin
     type: number
     sql: ${total_expense}/${total_income}
+    value_format: '0.00\%'
   
     
