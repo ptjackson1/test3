@@ -51,7 +51,7 @@
     sql: ${TABLE}.lineofbusiness
       
   - measure: count
-    type: count
+    type: count_distinct
     drill_fields: [id, client_name]
 
   - measure: total_income 
@@ -80,5 +80,6 @@
       #  END
     
     value_format: '0.000'
+    
   
     
