@@ -52,6 +52,7 @@
       
   - measure: count
     type: count_distinct
+    sql: ClientName
     drill_fields: [id, client_name]
 
   - measure: total_income 
