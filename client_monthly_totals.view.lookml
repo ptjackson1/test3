@@ -46,6 +46,10 @@
         THEN ${amount}
       END
       
+  - dimension: line_of_business
+    type: string
+    sql: ${TABLE}.lineofbusiness
+      
   - measure: count
     type: count
     drill_fields: [id, client_name]
