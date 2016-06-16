@@ -55,6 +55,11 @@
       relationship: many_to_one
 
 - explore: client_monthly_totals
+  joins:
+    - join: client_facts
+      type: left_outer
+      relationship: many_to_one
+      sql_on: ${client_monthly_totals.client_name} = ${client_facts.clientname}
 
 - explore: customer
   label:  'Locations-Sites'
