@@ -15,7 +15,7 @@
 
   - dimension: acctg_category
     type: string
-    sql: ${TABLE}.AcctgCategory
+    sql: LTRIM(${TABLE}.AcctgCategory)
 
   - dimension: amount
     type: number
