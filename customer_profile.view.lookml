@@ -45,7 +45,6 @@
 
   - dimension: name
     type: string
-    hidden: true
     sql: ${TABLE}.Name
 
   - dimension: net_suite_parent_id
