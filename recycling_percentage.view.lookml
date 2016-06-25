@@ -5,6 +5,7 @@
   - dimension: id
     primary_key: true
     type: number
+    hidden: true
     sql: ${TABLE}.ID
 
   - dimension_group: begin
@@ -14,12 +15,12 @@
 
   - dimension: category_recycling_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CategoryRecyclingID
 
   - dimension: customer_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerID
 
   - dimension_group: end
