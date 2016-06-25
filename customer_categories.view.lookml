@@ -4,30 +4,34 @@
 
   - dimension: id
     primary_key: true
+    hidden: true 
     type: number
     sql: ${TABLE}.ID
 
   - dimension_group: create
     type: time
+    hidden: true 
     timeframes: [time, date, week, month]
     sql: ${TABLE}.CreateDate
 
   - dimension: create_user
     type: string
+    hidden: true
     sql: ${TABLE}.CreateUser
 
   - dimension: customer_profile_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerProfileID
 
   - dimension: service_category_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.ServiceCategoryID
 
   - measure: count
     type: count
+    hidden: true 
     drill_fields: detail*
 
 

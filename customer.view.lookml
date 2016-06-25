@@ -4,6 +4,7 @@
 
   - dimension: id
     primary_key: true
+    hidden: true 
     type: number
     sql: ${TABLE}.ID
 
@@ -17,26 +18,28 @@
 
   - dimension_group: create
     type: time
+    hidden: true 
     timeframes: [time, date, week, month]
     sql: ${TABLE}.CreateDate
 
   - dimension: create_user
     type: string
+    hidden: true 
     sql: ${TABLE}.CreateUser
 
   - dimension: customer_profile_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerProfileID
 
   - dimension: customer_segment_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerSegmentID
 
   - dimension: customer_type_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerTypeID
 
   - dimension: has_organics
@@ -53,10 +56,12 @@
 
   - dimension: net_suite_id
     type: number
+    hidden: true 
     sql: ${TABLE}.NetSuiteID
 
   - dimension: phaseware_id
     type: number
+    hidden: true
     sql: ${TABLE}.PhasewareId
 
   - dimension: site_type
@@ -69,11 +74,13 @@
 
   - dimension_group: update
     type: time
+    hidden: true 
     timeframes: [time, date, week, month]
     sql: ${TABLE}.UpdateDate
 
   - dimension: update_user
     type: string
+    hidden: true 
     sql: ${TABLE}.UpdateUser
 
   - dimension: zip

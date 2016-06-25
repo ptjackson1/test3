@@ -5,15 +5,18 @@
   - dimension: id
     type: number
     primary_key: true
+    hidden: true 
     sql: ${TABLE}.ID
 
   - dimension_group: create
     type: time
+    hidden: true 
     timeframes: [time, date, week, month]
     sql: ${TABLE}.CreateDate
 
   - dimension: create_user
     type: string
+    hidden: true
     sql: ${TABLE}.CreateUser
 
   - dimension: percentage
@@ -22,12 +25,12 @@
 
   - dimension: recycling_method_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.RecyclingMethodID
 
   - dimension: service_category_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.ServiceCategoryID
 
   - measure: percentageRecycle

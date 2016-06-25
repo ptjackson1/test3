@@ -5,6 +5,7 @@
   - dimension: id
     primary_key: true
     type: number
+    hidden: true 
     sql: ${TABLE}.ID
 
   - dimension: calc_summary_values
@@ -13,16 +14,18 @@
 
   - dimension_group: create
     type: time
+    hidden: true 
     timeframes: [time, date, week, month]
     sql: ${TABLE}.CreateDate
 
   - dimension: create_user
     type: string
+    hidden: true 
     sql: ${TABLE}.CreateUser
 
   - dimension: customer_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.CustomerID
     
   - dimension: size_type_uom
@@ -49,7 +52,7 @@
 
   - dimension: service_category_id
     type: number
-    # hidden: true
+    hidden: true
     sql: ${TABLE}.ServiceCategoryID
 
   - dimension: size
