@@ -242,42 +242,42 @@
 
 - explore: recycling_method
 
-- explore: recycling_method_summary
-  joins:
-     - join: customer
-       type: left_outer 
-       sql_on: ${recycling_method_summary.customer_id} = ${customer.id}
-       relationship: many_to_one
-
-     - join: recycling_method
-       type: left_outer 
-       sql_on: ${recycling_method_summary.recycling_method_id} = ${recycling_method.id}
-       relationship: many_to_one
-
-     - join: service_category
-       type: left_outer 
-       sql_on: ${recycling_method_summary.service_category_id} = ${service_category.id}
-       relationship: many_to_one
-
-     - join: customer_profile
-       type: left_outer 
-       sql_on: ${customer.customer_profile_id} = ${customer_profile.id}
-       relationship: many_to_one
-
-     - join: customer_segment
-       type: left_outer 
-       sql_on: ${customer.customer_segment_id} = ${customer_segment.id}
-       relationship: many_to_one
-
-     - join: customer_type
-       type: left_outer 
-       sql_on: ${customer.customer_type_id} = ${customer_type.id}
-       relationship: many_to_one
-
-     - join: line_of_business
-       type: left_outer 
-       sql_on: ${service_category.line_of_business_id} = ${line_of_business.id}
-       relationship: many_to_one
+# - explore: recycling_method_summary
+#   joins:
+#      - join: customer
+#        type: left_outer 
+#        sql_on: ${recycling_method_summary.customer_id} = ${customer.id}
+#        relationship: many_to_one
+# 
+#      - join: recycling_method
+#        type: left_outer 
+#        sql_on: ${recycling_method_summary.recycling_method_id} = ${recycling_method.id}
+#        relationship: many_to_one
+# 
+#      - join: service_category
+#        type: left_outer 
+#        sql_on: ${recycling_method_summary.service_category_id} = ${service_category.id}
+#        relationship: many_to_one
+# 
+#      - join: customer_profile
+#        type: left_outer 
+#        sql_on: ${customer.customer_profile_id} = ${customer_profile.id}
+#        relationship: many_to_one
+# 
+#      - join: customer_segment
+#        type: left_outer 
+#        sql_on: ${customer.customer_segment_id} = ${customer_segment.id}
+#        relationship: many_to_one
+# 
+#      - join: customer_type
+#        type: left_outer 
+#        sql_on: ${customer.customer_type_id} = ${customer_type.id}
+#        relationship: many_to_one
+# 
+#      - join: line_of_business
+#        type: left_outer 
+#        sql_on: ${service_category.line_of_business_id} = ${line_of_business.id}
+#        relationship: many_to_one
 
 
 - explore: recycling_percentage
