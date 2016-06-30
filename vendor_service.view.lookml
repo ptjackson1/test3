@@ -105,7 +105,7 @@
 
   - dimension_group: service
     type: time
-    timeframes: [date, week, month, year ]
+    timeframes: [date, week, month, month_name,  year ]
     convert_tz: false
     sql: ${TABLE}.ServiceDate
 
