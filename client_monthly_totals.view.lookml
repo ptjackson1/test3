@@ -9,6 +9,7 @@
     suggest_dimension: line_of_business
 
   - dimension: id
+    hidden: true 
     primary_key: true
     type: number
     sql: ${TABLE}.ID
@@ -33,10 +34,12 @@
     sql: ${TABLE}.FinDate
 
   - dimension: income_or_expense
+    hidden: true 
     type: string
     sql: ${TABLE}.IncomeOrExpense
     
   - dimension: income_amount
+    hidden: true 
     type: number
     sql: |
       CASE 
@@ -45,6 +48,7 @@
       END
       
   - dimension: expense_amount
+    hidden: true 
     type: number
     sql: |
       CASE 
