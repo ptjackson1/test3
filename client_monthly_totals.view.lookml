@@ -87,7 +87,7 @@
     type: number
     sql: ${total_income}-${total_expense}
     value_format_name: usd
-    drill_fields: detail*
+    drill_fields: [client_name, amount, month]
     
   - measure: Gross_Margin
     type: number
